@@ -21,7 +21,7 @@ function CourseDetails() {
     const user = JSON.parse(storedUser);
 
     fetch(
-      `http://localhost:5000/courses/${id}/details?studentId=${user.id}`
+`https://pathway-m76o.onrender.com/courses/${id}/details?studentId=${user.id}`
     )
       .then(res => {
         if (!res.ok) throw new Error("Failed to load course");

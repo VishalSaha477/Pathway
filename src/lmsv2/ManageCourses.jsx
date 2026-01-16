@@ -9,13 +9,13 @@ function ManageCourses() {
   }, []);
 
   function refresh() {
-    fetch("http://localhost:5000/courses")
+    fetch("https://pathway-m76o.onrender.com/courses")
       .then(res => res.json())
       .then(data => setCourses(data));
   }
 
   const handleToggleStatus = (course) => {
-    fetch(`http://localhost:5000/courses/${course.id}/status`, {
+    fetch(`https://pathway-m76o.onrender.com/courses/${course.id}/status`, {
       method: "PUT"
     })
       .then(res => res.json())

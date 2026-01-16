@@ -21,7 +21,7 @@ function ExploreCourses() {
 
     setStudent(user);
 
-    fetch(`http://localhost:5000/students/${user.id}/explore`)
+    fetch(`https://pathway-m76o.onrender.com/students/${user.id}/explore`)
       .then(res => res.json())
       .then(data => setCourses(data));
   }, [nav]);
@@ -42,7 +42,7 @@ function ExploreCourses() {
 
     setEnrolling(true);
 
-    fetch(`http://localhost:5000/students/${student.id}/enroll`, {
+    fetch(`https://pathway-m76o.onrender.com/students/${student.id}/enroll`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ courseId: selectedCourse.id })

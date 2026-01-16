@@ -11,13 +11,13 @@ function ManageStudents() {
   }, []);
 
   function refresh() {
-    fetch("http://localhost:5000/students")
+    fetch("https://pathway-m76o.onrender.com/students")
       .then(res => res.json())
       .then(data => setStudents(data));
   }
 
   const handleToggleStatus = (student) => {
-    fetch(`http://localhost:5000/students/${student.id}/status`, {
+    fetch(`hhttps://pathway-m76o.onrender.com/students/${student.id}/status`, {
       method: "PUT"
     })
       .then(res => res.json())
@@ -29,7 +29,7 @@ function ManageStudents() {
   };
 
   const handleSaveStudent = () => {
-    fetch("http://localhost:5000/students", {
+    fetch("https://pathway-m76o.onrender.com/students", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newStudent)

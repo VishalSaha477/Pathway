@@ -11,7 +11,7 @@ function Index() {
     e.preventDefault();
     setError("");
 
-    fetch("http://localhost:5000/login", {
+    fetch("https://pathway-m76o.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email })

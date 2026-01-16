@@ -23,7 +23,7 @@ function StudentDashboard() {
 
     setStudent(user);
 
-    fetch(`http://localhost:5000/students/${user.id}/courses`)
+    fetch(`https://pathway-m76o.onrender.com/students/${user.id}/courses`)
       .then(res => res.json())
       .then(data => setCourses(data));
   }, [nav]);

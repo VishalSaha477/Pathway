@@ -10,7 +10,8 @@ function AdminDashboard() {
     });
 
     useEffect(() => {
-    fetch("http://localhost:5000/admin/stats")
+    //fetch("http://localhost:5000
+     fetch("https://pathway-m76o.onrender.com/admin/stats")
         .then(res => res.json())
         .then(data => setStats(data));
     }, []);
